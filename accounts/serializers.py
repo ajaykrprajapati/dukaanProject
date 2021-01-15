@@ -1,9 +1,7 @@
-from .models.user_model import CustomUser
+from .models import CustomUser
+from rest_framework import serializers
 
-from .base_serializer import BaseSerializer
-
-
-class UserSerializer(BaseSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = [
@@ -11,12 +9,10 @@ class UserSerializer(BaseSerializer):
             "username",
             "first_name",
             "last_name",
-            "login_method",
-            "email",
         ]
 
 
-class UserAttributesSerializer(BaseSerializer):
+class UserAttributesSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = [
@@ -28,7 +24,7 @@ class UserAttributesSerializer(BaseSerializer):
         ]
 
 
-class UserBasicInfoSerializer(BaseSerializer):
+class UserBasicInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = [

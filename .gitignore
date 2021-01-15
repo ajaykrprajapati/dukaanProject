@@ -138,3 +138,4 @@ env_dukaan
 
 .vscode
 .vscode/settings.json
+migrations

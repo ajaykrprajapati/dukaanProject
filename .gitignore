@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#IDE Config
+.idea
+
+celerybeat.pid
+dump.rdb
+myvenv
+env_dukaan
+
+.vscode
+.vscode/settings.json

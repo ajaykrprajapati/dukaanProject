@@ -21,5 +21,5 @@ docker-compose run --rm web [command]
 
 ## Postman
 
-Use postman collection to see API details.
+Use postman collection file to see API details.
 

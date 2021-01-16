@@ -1,4 +1,4 @@
-"""dukaan URL Configuration
+"""Dukaan URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import StoreDetailsAPIView, ProductDetails, CartItemsAPIView, OrderAPIView
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("seller/", include("seller.urls")),
-    path("buyer/", include("buyer.urls")),
+    
+    path('store_details/', StoreDetailsAPIView.as_view()),
+    path('product_details/', ProductDetails.as_view()),
+    path('cart_details/', CartItemsAPIView.as_view()),
+    path('order/<int:pk>/', OrderAPIView.as_view())
 ]

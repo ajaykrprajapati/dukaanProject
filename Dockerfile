@@ -8,7 +8,7 @@ RUN pip install -r /requirements.txt
 
 RUN mkdir /dukaan
 WORKDIR /dukaan
-COPY ./dukaan /dukaan
+COPY ./ /dukaan
 
 RUN adduser -D user
 User user

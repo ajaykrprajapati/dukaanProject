@@ -7,6 +7,6 @@ services: # define services
     ports: # expose ports [HOST:CONTAINER]
       - "8000:8000"
     volumes:
-      - ./dukaan:/dukaan # mounts ./app in host to /app in container.
+      - ./:/dukaan # mounts ./app in host to /app in container.
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
